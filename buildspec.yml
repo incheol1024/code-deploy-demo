@@ -8,6 +8,13 @@ phases:
     post_build:
       commands:
         - echo $(basename ./target/*.jar)
+
+artifacts:
+  files:
+    - appspec.yml
+    - target/*.jar
+  discard-paths: yes
+
 cache:
   paths:
     - '/root/.m2/**/*'
