@@ -7,7 +7,7 @@ phases:
       - mvn package -DskipTests
     post_build:
       commands:
-        - ehco $(basename ./target/*.jar)
+        - echo $(basename ./target/*.jar)
 cache:
   paths:
     - '/root/.m2/**/*'
