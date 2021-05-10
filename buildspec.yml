@@ -1,0 +1,13 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo Build Starting on `date`
+      - mvn package -DskipTests
+    post_build:
+      commands:
+        - ehco $(basename ./target/*.jar)
+cache:
+  paths:
+    - `root/.m2/**/*`
